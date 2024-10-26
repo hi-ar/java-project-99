@@ -10,6 +10,6 @@ RUN java -version
 
 RUN echo $JAVA_HOME
 
-RUN gradle installDist
+RUN ./gradlew :server:installDist
 
 CMD build/install/app/bin/app
