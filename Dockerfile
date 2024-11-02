@@ -18,12 +18,6 @@ WORKDIR /app
 
 COPY ./ .
 
-RUN gradle -version
-
-RUN java -version
-
-RUN echo $JAVA_HOME
-
 RUN gradle installDist
 
 CMD build/install/app/bin/app
