@@ -9,6 +9,10 @@ plugins {
 group = 'hexlet.code'
 version = '0.0.1-SNAPSHOT'
 
+application { //s1 for deploying
+	mainClass = 'hexlet.code.AppApplication'
+}
+
 java {
 	toolchain {
 		languageVersion = JavaLanguageVersion.of(21)
