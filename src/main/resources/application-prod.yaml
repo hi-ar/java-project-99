@@ -1,0 +1,21 @@
+server:
+  port: ${PORT}
+
+spring:
+  # Настраиваем подключение к базе данных
+  datasource:
+    #    settings for render deploy:
+    url: jdbc:postgres://${PGUSER}:${PGHOST}/${PGDATABASE}
+    username: ${PGUSER}
+    password: ${PGPASSWORD}
+
+    #    settings for railway deploy:
+    #      url: jdbc:postgresql://${PGHOST}:${PGPORT}/${PGDATABASE}
+    #      username: ${PGUSER}
+    #      password: ${PGPASSWORD}
+    driverClassName: org.postgresql.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update

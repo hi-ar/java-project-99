@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: app
+
+  jpa:
+    show-sql: true
+
+  output:
+    ansi:
+      enabled: ALWAYS
+
+  profiles:
+    active: ${APP_ENV:dev}
+
+logging:
+  level:
+    root: INFO
+#    root: WARN

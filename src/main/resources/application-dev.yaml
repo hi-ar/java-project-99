@@ -1,0 +1,26 @@
+server:
+  port: 8080
+
+spring:
+  # Настраиваем подключение к базе данных
+  datasource:
+#    url: jdbc:h2:file:~/taskManager
+    url: jdbc:h2:mem:mydb
+    username: #пустой если в билд.грейдл в разделе liquibase{activities{main{ не заданы лог/пар
+    password: #пустой
+    driverClassName: org.h2.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create-drop
+
+# Настраиваем консоль Н2
+# Это позволит нам открыть её в браузере по указанному пути
+  h2:
+    console:
+      enabled: true
+    # Указываем путь, по которому будет окрываться консоль
+      path: /h2console
+      settings:
+        web-allow-others: true
