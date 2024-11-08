@@ -5,7 +5,7 @@ spring:
   # Настраиваем подключение к базе данных
   datasource:
     #    settings for render deploy:
-    url: jdbc:postgresql://${PGUSER}:${PGPASSWORD}@${PGHOST}/${PGDATABASE}
+    url: jdbc:postgres://${PGUSER}:${PGPASSWORD}@${PGHOST}/${PGDATABASE}
     username: ${PGUSER}
     password: ${PGPASSWORD}
 
