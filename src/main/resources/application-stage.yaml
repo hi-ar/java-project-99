@@ -1,13 +1,13 @@
 server:
-  port: ${PORT}
+  port: 5432
 
 spring:
   # Настраиваем подключение к базе данных
   datasource:
     #    settings for render deploy:
-    url: jdbc:postgresql://${PGUSER}:${PGPASSWORD}@${PGHOST}/${PGDATABASE}
-    username: ${PGUSER}
-    password: ${PGPASSWORD}
+    url: jdbc:postgres://postgres:123@localhost/my_local_pgserver
+    username: postgres
+    password: 123
 
     #    settings for render deploy (prev):
 #    url: jdbc:postgres://${PGUSER}:${PGHOST}/${PGDATABASE}
