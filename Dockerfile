@@ -20,6 +20,6 @@ COPY ./ .
 
 RUN gradle installDist
 
-ECHO APP_ENV: ${APP_ENV}
+RUN echo APP_ENV: ${APP_ENV}
 
 CMD build/install/app/bin/app
