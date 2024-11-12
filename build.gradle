@@ -22,7 +22,7 @@ java {
 
 repositories {
 	mavenCentral()
-	maven { url 'https://repo.spring.io/snapshot' }
+//	maven { url 'https://repo.spring.io/snapshot' }
 }
 
 configurations { //s2
