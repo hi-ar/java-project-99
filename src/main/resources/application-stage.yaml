@@ -4,20 +4,9 @@ server:
 spring:
   # Настраиваем подключение к базе данных
   datasource:
-    #    settings for render deploy:
-    url: jdbc:postgresql://localhost:5432/my_local_pgserver
-    username:
-    password:
-
-    #    settings for render deploy (prev):
-#    url: jdbc:postgres://${PGUSER}:${PGHOST}/${PGDATABASE}
-#    username: ${PGUSER}
-#    password: ${PGPASSWORD}
-
-    #    settings for railway deploy:
-    #      url: jdbc:postgresql://${PGHOST}:${PGPORT}/${PGDATABASE}
-    #      username: ${PGUSER}
-    #      password: ${PGPASSWORD}
+    url: jdbc:postgresql://localhost:5432/
+    username: postgres
+    password: 123
     driverClassName: org.postgresql.Driver
 
   jpa:

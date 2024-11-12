@@ -1,5 +1,5 @@
 server:
-  port: 8080 #${PORT}
+  port: 8080
 
 spring:
   # Настраиваем подключение к базе данных
@@ -8,16 +8,7 @@ spring:
     url: jdbc:postgresql://${PGUSER}:${PGPASSWORD}@${PGHOST}/${PGDATABASE}
     username: ${PGUSER}
     password: ${PGPASSWORD}
-
-    #    settings for render deploy (prev):
-#    url: jdbc:postgres://${PGUSER}:${PGHOST}/${PGDATABASE}
-#    username: ${PGUSER}
-#    password: ${PGPASSWORD}
-
-    #    settings for railway deploy:
-    #      url: jdbc:postgresql://${PGHOST}:${PGPORT}/${PGDATABASE}
-    #      username: ${PGUSER}
-    #      password: ${PGPASSWORD}
+    port: ${PORT}
     driverClassName: org.postgresql.Driver
 
   jpa:
