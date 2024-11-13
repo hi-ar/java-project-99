@@ -14,15 +14,25 @@ application { //s1 for deploying
 	mainClass = 'hexlet.code.AppApplication'
 }
 
-java {
-	toolchain {
-		languageVersion = JavaLanguageVersion.of(21)
-	}
+//java {
+//	toolchain {
+//		languageVersion = JavaLanguageVersion.of(21)
+//
+//	}
+//} updated to:
+compileJava {
+	options.release = 21
+	options.encoding = 'UTF-8'
 }
 
 repositories {
 	mavenCentral()
 	maven { url 'https://repo.spring.io/snapshot' }
+}
+
+wrapper {
+	gradleVersion = '8.10.2'
+	distributionType = Wrapper.DistributionType.ALL
 }
 
 configurations { //s2
@@ -37,7 +47,7 @@ dependencies {
 			'org.springframework.boot:spring-boot-starter-web', //s1
 			'org.springframework.boot:spring-boot-starter-data-jpa', //s2 (@Entity nw)
 			'com.querydsl:querydsl-jpa:5.0.0:jakarta', //2 шаг актуал
-			'org.postgresql:postgresql:42.7.2' // try to move compileonly/runtimeonly
+//			'org.postgresql:postgresql:42.7.2' // try to move compileonly/runtimeonly
 	)
 
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
@@ -80,3 +90,6 @@ test {
 jacocoTestReport { //нужно обе? если это таски, то почему не выделяются task?
 	dependsOn test
 }
+
+task stage(dependsOn: [clean, installDist])
+installDist.mustRunAfter clean
