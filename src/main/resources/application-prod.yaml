@@ -5,14 +5,22 @@ spring:
   # Настраиваем подключение к базе данных
   datasource:
     #    settings for render deploy:
-    url: postgresql://taskmng_2410_postgre_user:M2Sbyg7obH3IMZpTZXz6LF4YBq8KCDFO@dpg-csej20ogph6c73eqofk0-a/taskmng_2410_postgre
 #    url: jdbc:postgresql://${PGUSER}:${PGPASSWORD}@${PGHOST}/${PGDATABASE}
 #    username: ${PGUSER}
 #    password: ${PGPASSWORD}
 #    port: ${PORT}
-    driverClassName: org.postgresql.Driver
+#    driverClassName: org.postgresql.Driver
+#
+#  jpa:
+#    database-platform: org.hibernate.dialect.PostgreSQLDialect
+#    hibernate:
+#      ddl-auto: update
+    url: jdbc:h2:mem:mydb
+    username: #пустой если в билд.грейдл в разделе liquibase{activities{main{ не заданы лог/пар
+    password: #пустой
+    driverClassName: org.h2.Driver
 
   jpa:
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
-      ddl-auto: update
+      ddl-auto: create-drop
