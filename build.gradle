@@ -1,7 +1,7 @@
 plugins {
 	id 'application' //s1 for installDist https://docs.gradle.org/current/userguide/application_plugin.html
 	id 'java'
-	id 'org.springframework.boot' version '3.2.4-SNAPSHOT'
+	id 'org.springframework.boot' version '3.2.4'
 	id 'io.spring.dependency-management' version '1.1.6'
 	id 'checkstyle' //s1
 	id 'jacoco'
