@@ -22,7 +22,7 @@ java {
 
 repositories {
 	mavenCentral()
-//	maven { url 'https://repo.spring.io/snapshot' }
+	maven { url 'https://repo.spring.io/snapshot' }
 }
 
 configurations { //s2
@@ -37,7 +37,7 @@ dependencies {
 			'org.springframework.boot:spring-boot-starter-web', //s1
 			'org.springframework.boot:spring-boot-starter-data-jpa', //s2 (@Entity nw)
 			'com.querydsl:querydsl-jpa:5.0.0:jakarta', //2 шаг актуал
-			'org.postgresql:postgresql:42.6.0' // try to move compileonly/runtimeonly
+			'org.postgresql:postgresql:42.7.2' // try to move compileonly/runtimeonly
 	)
 
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
