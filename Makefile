@@ -30,11 +30,11 @@ install:
 # start-dist:
 # 	./build/install/app/bin/app
 
-#lint:
-#	./gradlew checkstyleMain checkstyleTest
-#
-#test:
-#	./gradlew test
+lint:
+	./gradlew checkstyleMain checkstyleTest
+
+test:
+	./gradlew test
 
 # report:
 # 	./gradlew jacocoTestReport
